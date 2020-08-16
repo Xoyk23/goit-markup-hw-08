@@ -1,0 +1,69 @@
+.team.section {
+  background-color: $secondary-white-color;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list-item {
+  padding-bottom: 24px;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: $primary-white-color;
+
+  & > img {
+    margin-bottom: 30px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+/* Заголовок */
+.team-main-title {
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: $primary-title-color;
+}
+
+/* Имена команды */
+.team-title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $primary-title-color;
+}
+/* Должности */
+.team-text {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $primary-text-color;
+}
+/* Соц сети */
+
+.team-socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+}
+
+.team-socials a {
+  color: $socials-main-color;
+}

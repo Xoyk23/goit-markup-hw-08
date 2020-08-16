@@ -1,0 +1,46 @@
+// секция преимуществ
+
+.advantages-list {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  .advantages-item {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.advantages-util {
+  display: flex;
+  height: 120px;
+  background-color: $secondary-white-color;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+
+  margin-bottom: 30px;
+}
+
+.icon-advantages {
+  width: 70px;
+  height: 70px;
+}
+
+.advantages-title {
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-title-color;
+}
+
+.advantages-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: $primary-text-color;
+}
