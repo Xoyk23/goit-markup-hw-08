@@ -1,14 +1,23 @@
 .logo-head {
-  margin-right: 85px;
-
+  display: block;
   font-family: $second-font;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.17;
   color: $main-black-color;
 
   .logo-decoration {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: 1199px) {
+    margin-right: 85px;
+
+    font-family: $second-font;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $main-black-color;
   }
 }
 
@@ -18,14 +27,21 @@ header {
 }
 
 header .section {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @media screen and (min-width: $mobile) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
-
 .head .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
+
+  @media screen and (min-width: $mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* оформление навигации сайта */
@@ -35,37 +51,42 @@ header .section {
 
 .main-nav,
 .menunav {
-  display: flex;
-  align-items: center;
+  display: block;
+  @media screen and (min-width: $mobile) {
+    display: flex;
+    align-items: center;
+  }
 }
-
+// костыль, убрать потом
+// .menunav {
+//   @media screen and (max-width: $tablet) {
+//     display: none;
+//   }
+// }
 .menunav .item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-util {
-  display: flex;
-}
-
 .contacts-list {
-  display: flex;
+  display: block;
 
-  &-item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+
+    &-item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
 .menunav-links {
   position: relative;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   font-style: normal;
   color: $primary-title-color;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,6 +94,27 @@ header .section {
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-style: normal;
+    color: $primary-title-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }
 
