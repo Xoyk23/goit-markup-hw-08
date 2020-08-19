@@ -1,0 +1,389 @@
+.logo-head {
+  display: block;
+  font-family: $second-font;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $main-black-color;
+
+  .logo-decoration {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: 1199px) {
+    margin-right: 85px;
+
+    font-family: $second-font;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $main-black-color;
+  }
+}
+
+header {
+  color: var(--main-font-color);
+  border-bottom: 1px solid $header-border-color;
+}
+
+header .section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @media screen and (min-width: $mobile) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+.head .container {
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* оформление навигации сайта */
+.main-no-border {
+  border: 0px;
+}
+
+.main-nav,
+.menunav {
+  display: block;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+// костыль, убрать потом
+// .menunav {
+//   @media screen and (max-width: $tablet) {
+//     display: none;
+//   }
+// }
+.menunav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-list {
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+
+    &-item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.menunav-links {
+  position: relative;
+
+  display: block;
+  font-style: normal;
+  color: $primary-title-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-style: normal;
+    color: $primary-title-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.contacts-links {
+  @extend .menunav-links;
+  display: flex;
+  align-items: center;
+}
+
+.icon-smartphone {
+  margin-right: 10px;
+  fill: $primary-text-color;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contacts-links:focus &,
+  .contacts-links:hover & {
+    fill: $accent-color;
+  }
+}
+
+.icon-envelope {
+  @extend .icon-smartphone;
+}
+
+// кнопка меню
+.menu-button {
+  display: inline-flex;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+
+/* Оформление линии на активной странице*/
+
+.current {
+  color: $accent-color;
+  fill: $accent-color;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+
+    content: '';
+    display: block;
+    width: 100%;
+
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+
+// старое
+.logo-head {
+  display: block;
+  font-family: $second-font;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $main-black-color;
+
+  .logo-decoration {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: 1199px) {
+    margin-right: 85px;
+
+    font-family: $second-font;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $main-black-color;
+  }
+}
+
+header {
+  color: var(--main-font-color);
+  border-bottom: 1px solid $header-border-color;
+}
+
+header .section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.head .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// .menu-container {
+//   display: none;
+// //   @media screen and (min-width: $tablet) {
+// //     display: flex;
+// //   }
+// }
+
+/* оформление навигации сайта */
+.main-no-border {
+  border: 0px;
+}
+
+.main-nav,
+.menunav {
+  display: block;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+// костыль, убрать потом
+// .menunav {
+//   @media screen and (max-width: $tablet) {
+//     display: none;
+//   }
+// }
+.menunav .item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.contacts-list {
+  display: block;
+  &-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+
+    &-item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.menunav-links {
+  position: relative;
+
+  display: block;
+  font-style: normal;
+  color: $primary-title-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-style: normal;
+    color: $primary-title-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.contacts-links {
+  @extend .menunav-links;
+  display: flex;
+  align-items: center;
+  color: $primary-text-color;
+}
+
+.icon-smartphone {
+  margin-right: 10px;
+  fill: $primary-text-color;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contacts-links:focus &,
+  .contacts-links:hover & {
+    fill: $accent-color;
+  }
+}
+
+.icon-envelope {
+  @extend .icon-smartphone;
+}
+
+// кнопка меню
+.menu-button {
+  display: inline-flex;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+  &:hover .icon-cross,
+  &:focus .icon-cross,
+  &:hover .icon-menu,
+  &:focus .icon-menu {
+    fill: $accent-color;
+  }
+}
+
+/* Оформление линии на активной странице*/
+
+.current {
+  color: $accent-color;
+  fill: $accent-color;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+
+    content: '';
+    display: block;
+    width: 100%;
+
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}

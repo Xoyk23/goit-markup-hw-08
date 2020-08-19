@@ -27,28 +27,12 @@
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 26px;
-    line-height: 1.6;
+    font-size: 44px;
+    line-height: 1.4;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
-  }
-
-  @media screen and (min-width: $tablet) {
-    &-title {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 30px;
-
-      font-weight: 900;
-      font-size: 44px;
-      line-height: 1.4;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
   }
 }
 

@@ -22,10 +22,12 @@
     <!-- Шапка -->
     <header class="head main-no-border">
       <div class="container section">
-        <nav class="main-nav">
+        
           <a href="./index.html" class="logo-head"
             ><span class="logo-decoration">Web</span> Studio</a
           >
+          <div class="menu-container" data-menu>
+            <nav class="main-nav">
           <ul class="menunav list">
             <li class="item">
               <a href="./index.html" class="menunav-links current link"
@@ -42,8 +44,8 @@
             </li>
           </ul>
         </nav>
-        <div class="header-util">
-          <address class="contacts list">
+    
+          <div class="contacts list">
             <ul class="contacts-list list">
               <li class="contacts-list-item">
                 <a
@@ -65,8 +67,14 @@
                 >
               </li>
             </ul>
-          </address>
-        </div>
+            </div>
+          
+          </div>
+<button  class="menu-button 
+            " type="button" aria-expanded="false" data-menu-button ><svg width=40px height=40px  aria-label="Переключатель мобильного меню">
+              <use  class="icon-menu" href="./images/sprite.svg#icon-menu_mobile"></use>
+              <use  class="icon-cross" href="./images/sprite.svg#icon-close-black"></use>
+            </svg></button>
       </div>
     </header>
     <main>
@@ -611,6 +619,7 @@ placeholder=" "
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

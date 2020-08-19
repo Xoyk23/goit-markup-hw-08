@@ -1,0 +1,130 @@
+/* Подвал */
+
+.footer {
+  background: $footer-background-color;
+}
+
+footer div {
+  vertical-align: top;
+}
+
+footer div.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: baseline;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer-contacts-block {
+  margin-right: 69px;
+}
+
+.contacts-footer-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.mail-footer {
+  display: block;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phone-footer {
+  @extend .mail-footer;
+
+  color: $footer-links-color;
+}
+
+.map-link {
+  @extend .mail-footer;
+  color: #ffffff;
+}
+
+.logo-footer {
+  margin-bottom: 20px;
+
+  font-family: $second-font;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+
+  .logo-decoration {
+    color: $accent-color;
+  }
+}
+
+.join_us {
+  margin-right: 94px;
+}
+
+.join_us-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: $main-font;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.subscribe-title {
+  @extend .join_us-title;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+
+  &-item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+/* Дивчик форма подписки */
+
+.form-field {
+  display: flex;
+}
+
+.form-field-input {
+  margin-right: 10px;
+  width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $footer-background-color;
+
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.icon-icon_send {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  fill: $primary-white-color;
+}
