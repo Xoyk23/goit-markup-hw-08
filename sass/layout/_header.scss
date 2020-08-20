@@ -1,29 +1,20 @@
 .logo-head {
   display: block;
+  margin-right: 85px;
+
   font-family: $second-font;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 1.17;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
   color: $main-black-color;
 
   .logo-decoration {
     color: $accent-color;
   }
-
-  @media screen and (min-width: 1199px) {
-    margin-right: 85px;
-
-    font-family: $second-font;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 1.2;
-    color: $main-black-color;
-  }
 }
 
 header {
-  position: relative;
-
   color: var(--main-font-color);
   border-bottom: 1px solid $header-border-color;
 }
@@ -31,88 +22,40 @@ header {
 header .section {
   padding-top: 0px;
   padding-bottom: 0px;
-  @media screen and (min-width: $mobile) and (max-width: $tablet) {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
 }
+
 .head .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.head.main-no-border {
+  border: 0px;
 }
 
 .menu-container {
   display: flex;
-
   &.is-open {
     display: block;
   }
 
-  @media screen and (max-width: 767px) {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 453px;
-    text-align: center;
-
-    background-color: $primary-white-color;
-    padding-top: 60px;
-    padding-right: 140px;
-    padding-bottom: 60px;
-    padding-left: 140px;
-  }
-}
-
-/* оформление навигации сайта */
-.main-no-border {
-  border: 0px;
+  /* оформление навигации сайта */
 }
 
 .main-nav,
 .menunav {
-  display: block;
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.menunav {
-  margin-bottom: 60px;
-}
-
-.menunav .item:not(:last-child) {
-  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .contacts-list {
-  display: block;
-  &-item:not(:last-child) {
-    margin-bottom: 16px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    display: flex;
-
-    &-item:not(:last-child) {
-      margin-bottom: 16px;
-    }
-  }
+  display: flex;
 }
 
 .menunav-links {
   position: relative;
 
-  display: inline-flex;
   font-style: normal;
   color: $primary-title-color;
   font-weight: 500;
@@ -126,32 +69,11 @@ header .section {
   &:focus {
     color: $accent-color;
   }
-
-  @media screen and (min-width: $tablet) {
-    position: relative;
-
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    font-style: normal;
-    color: $primary-title-color;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-      color: $accent-color;
-    }
-  }
 }
 
 .contacts-links {
   @extend .menunav-links;
-  // display: flex;
+  display: flex;
   align-items: center;
   color: $primary-text-color;
 }
@@ -172,37 +94,6 @@ header .section {
   @extend .icon-smartphone;
 }
 
-// кнопка меню
-.menu-button {
-  display: inline-flex;
-
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-
-  & .icon-cross {
-    display: none;
-  }
-
-  &.is-open .icon-cross {
-    display: block;
-  }
-
-  &.is-open .icon-menu {
-    display: none;
-  }
-  &:hover .icon-cross,
-  &:focus .icon-cross,
-  &:hover .icon-menu,
-  &:focus .icon-menu {
-    fill: $accent-color;
-  }
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-}
-
 /* Оформление линии на активной странице*/
 
 .current {
@@ -211,7 +102,7 @@ header .section {
 
   &::after {
     position: absolute;
-    bottom: -8px;
+    bottom: 0;
 
     content: '';
     display: block;
@@ -220,5 +111,187 @@ header .section {
     height: 4px;
     border-radius: 2px;
     background-color: $accent-color;
+  }
+}
+
+// Стили для мобилки
+@media screen and (max-width: 767px) {
+  header {
+    position: relative;
+
+    max-width: 767px;
+    margin: 0 auto;
+  }
+  // cекция хєддера
+  header .section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  // лого
+  .logo-head {
+    font-size: 24px;
+    line-height: 1.17;
+
+    .logo-decoration {
+      color: $accent-color;
+    }
+  }
+  // оформелние навигации сайта
+  .main-nav,
+  .menunav {
+    display: block;
+  }
+
+  .menunav {
+    margin-bottom: 60px;
+  }
+
+  .menunav-links {
+    display: inline-flex;
+    font-size: 18px;
+    line-height: 1.17;
+  }
+
+  .menunav-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .contacts-list {
+    display: block;
+    &-item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .contacts-links {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 453px;
+    text-align: center;
+
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 550ms linear;
+
+    background-color: $primary-white-color;
+    padding-top: 60px;
+    padding-right: 140px;
+    padding-bottom: 60px;
+    padding-left: 140px;
+  }
+  &.is-open {
+    // display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  // кнопка меню
+  .menu-button {
+    display: inline-flex;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    & .icon-cross {
+      display: none;
+    }
+
+    &.is-open .icon-cross {
+      display: block;
+    }
+
+    &.is-open .icon-menu {
+      display: none;
+    }
+    &:hover .icon-cross,
+    &:focus .icon-cross,
+    &:hover .icon-menu,
+    &:focus .icon-menu {
+      fill: $accent-color;
+    }
+  }
+
+  .current {
+    color: $accent-color;
+    fill: $accent-color;
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+}
+
+// стили для планшета
+@media screen and (min-width: 768px) {
+  header {
+    max-width: 1199px;
+    margin: 0 auto;
+  }
+
+  // cекция хєддера
+  header .section {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  // лого
+  .logo-head {
+    margin-right: 81px;
+    font-size: 24px;
+    line-height: 1.17;
+
+    .logo-decoration {
+      color: $accent-color;
+    }
+  }
+
+  // .main-nav {
+  //   margin-right: 81px;
+  // }
+  .menu-button {
+    display: none;
+  }
+
+  .main-nav {
+    margin-right: 84px;
+  }
+  .menunav-links {
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  .menunav-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .contacts-list {
+    display: block;
+
+    &-item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .contacts-links {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
