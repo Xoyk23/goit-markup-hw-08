@@ -431,7 +431,6 @@ a {
 
 .logo-head {
   display: block;
-  margin-right: 85px;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 26px;
@@ -636,7 +635,6 @@ header .section {
     padding-bottom: 21px;
   }
   .logo-head {
-    margin-right: 81px;
     font-size: 24px;
     line-height: 1.17;
   }
@@ -658,7 +656,8 @@ header .section {
     margin-right: 50px;
   }
   .contacts-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .contacts-list-item:not(:last-child) {
     margin-bottom: 10px;
@@ -669,6 +668,57 @@ header .section {
     letter-spacing: 0.02em;
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+  .current {
+    color: #2196f3;
+    fill: #2196f3;
+  }
+  .current::after {
+    bottom: -33px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .logo-head {
+    margin-right: 85px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .main-nav {
+    margin-right: 305px;
+  }
+  .menunav-links, .contacts-links {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contacts-links {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contacts-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .contacts-list-item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  .current {
+    color: #2196f3;
+    fill: #2196f3;
+  }
+  .current::after {
+    bottom: 0;
   }
 }
 

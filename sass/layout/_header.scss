@@ -1,6 +1,6 @@
 .logo-head {
   display: block;
-  margin-right: 85px;
+  // margin-right: 85px;
 
   font-family: $second-font;
   font-weight: bold;
@@ -246,7 +246,6 @@ header .section {
 
   // лого
   .logo-head {
-    margin-right: 81px;
     font-size: 24px;
     line-height: 1.17;
 
@@ -279,7 +278,8 @@ header .section {
   }
 
   .contacts-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     &-item:not(:last-child) {
       margin-bottom: 10px;
@@ -293,5 +293,66 @@ header .section {
 
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .current {
+    color: $accent-color;
+    fill: $accent-color;
+
+    &::after {
+      bottom: -33px;
+    }
+  }
+}
+// Для Десктопа
+@media screen and (min-width: 1200px) {
+  header .section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .logo-head {
+    margin-right: 85px;
+
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  .main-nav {
+    margin-right: 305px;
+  }
+  .menunav-links {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .contacts-links {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: row;
+
+    &-item:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
+  }
+  .current {
+    color: $accent-color;
+    fill: $accent-color;
+
+    &::after {
+      bottom: 0;
+    }
   }
 }
