@@ -583,12 +583,10 @@ header .section {
     text-align: center;
     opacity: 0;
     transform: scale(0);
-    transition: transform 550ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #ffffff;
     padding-top: 60px;
-    padding-right: 140px;
     padding-bottom: 60px;
-    padding-left: 140px;
   }
   .is-open {
     opacity: 1;
@@ -600,6 +598,7 @@ header .section {
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
   }
   .menu-button .icon-cross {
     display: none;
@@ -630,10 +629,6 @@ header .section {
     max-width: 1199px;
     margin: 0 auto;
   }
-  header .section {
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
   .logo-head {
     font-size: 24px;
     line-height: 1.17;
@@ -647,7 +642,12 @@ header .section {
   .main-nav {
     margin-right: 84px;
   }
+  .menu-container {
+    align-items: center;
+  }
   .menunav-links, .contacts-links {
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -664,17 +664,10 @@ header .section {
   }
   .contacts-links {
     font-size: 12px;
-    line-height: 1.17;
+    line-height: 1.67;
     letter-spacing: 0.02em;
     padding-top: 0px;
     padding-bottom: 0px;
-  }
-  .current {
-    color: #2196f3;
-    fill: #2196f3;
-  }
-  .current::after {
-    bottom: -33px;
   }
 }
 
@@ -726,44 +719,32 @@ header .section {
 /* Секция Герой */
 /* Картинка Герой */
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image.jpg");
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 480px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image-mobile@2x.jpg");
+  }
+}
+
 .hero-title {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 26px;
-  line-height: 1.6;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-title {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
 }
 
 .hero .button {
@@ -790,6 +771,54 @@ header .section {
 
 .hero .button:hover, .hero .button:focus {
   background-color: #188ce8;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1199px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image-desct.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image-desct@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 }
 
 .job.section {

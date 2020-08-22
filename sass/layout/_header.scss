@@ -179,13 +179,12 @@ header .section {
 
     opacity: 0;
     transform: scale(0);
-    transition: transform 550ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     background-color: $primary-white-color;
     padding-top: 60px;
-    padding-right: 140px;
+
     padding-bottom: 60px;
-    padding-left: 140px;
   }
   &.is-open {
     // display: block;
@@ -201,6 +200,7 @@ header .section {
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 
     & .icon-cross {
       display: none;
@@ -213,6 +213,7 @@ header .section {
     &.is-open .icon-menu {
       display: none;
     }
+
     &:hover .icon-cross,
     &:focus .icon-cross,
     &:hover .icon-menu,
@@ -239,10 +240,10 @@ header .section {
   }
 
   // cекция хєддера
-  header .section {
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
+  // header .section {
+  //   padding-top: 21px;
+  //   padding-bottom: 21px;
+  // }
 
   // лого
   .logo-head {
@@ -264,9 +265,13 @@ header .section {
   .main-nav {
     margin-right: 84px;
   }
+
+  .menu-container {
+    align-items: center;
+  }
   .menunav-links {
-    // padding-top: 32px;
-    // padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     font-size: 14px;
     line-height: 1.14;
@@ -288,20 +293,11 @@ header .section {
 
   .contacts-links {
     font-size: 12px;
-    line-height: 1.17;
+    line-height: 1.67;
     letter-spacing: 0.02em;
 
     padding-top: 0px;
     padding-bottom: 0px;
-  }
-
-  .current {
-    color: $accent-color;
-    fill: $accent-color;
-
-    &::after {
-      bottom: -33px;
-    }
   }
 }
 // Для Десктопа

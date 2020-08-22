@@ -4,51 +4,38 @@
 /* Картинка Герой */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 480px;
+  margin: 0 auto;
 
-  background-image: linear-gradient(
-      to right,
-      $hero-gradient-color,
-      $hero-gradient-color
-    ),
-    url('../images/hero-image.jpg');
+  background-image: linear-gradient($hero-gradient-color, $hero-gradient-color),
+    url('../images/hero-image-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        $hero-gradient-color,
+        $hero-gradient-color
+      ),
+      url('../images/hero-image-mobile@2x.jpg');
+  }
+
   &-title {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-bottom: 30px;
 
     font-weight: 900;
     font-size: 26px;
-    line-height: 1.6;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
-  }
-
-  @media screen and (min-width: $tablet) {
-    &-title {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 30px;
-
-      font-weight: 900;
-      font-size: 44px;
-      line-height: 1.4;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
   }
 }
 
@@ -77,5 +64,70 @@
   &:hover,
   &:focus {
     background-color: $secondaty-accent-color;
+  }
+}
+
+// стили для планшета
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1199px;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        $hero-gradient-color,
+        $hero-gradient-color
+      ),
+      url('../images/hero-image-tablet.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $hero-gradient-color,
+          $hero-gradient-color
+        ),
+        url('../images/hero-image-tablet@2x.jpg');
+    }
+  }
+}
+
+// cтили для декстопа
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    background-image: linear-gradient(
+        $hero-gradient-color,
+        $hero-gradient-color
+      ),
+      url('../images/hero-image-desct.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $hero-gradient-color,
+          $hero-gradient-color
+        ),
+        url('../images/hero-image-desct@2x.jpg');
+    }
+    &-title {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
   }
 }
