@@ -821,6 +821,41 @@ header .section {
   }
 }
 
+.advantages-util {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.icon-advantages {
+  width: 70px;
+  height: 70px;
+}
+
+.advantages-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+.advantages-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #757575;
+}
+
+.advantages-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .job.section {
   padding-top: 0px;
 }
