@@ -60,7 +60,7 @@
     &:nth-child(even) {
       margin-right: 0px;
     }
-    &:nth-child(n + 2) {
+    &:nth-last-child(-n + 2) {
       margin-bottom: 0px;
     }
   }
