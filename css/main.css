@@ -109,8 +109,7 @@ a {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 /* Кнопки */
@@ -838,7 +837,6 @@ header .section {
 
 .advantages-title {
   margin-bottom: 10px;
-  text-align: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -852,8 +850,41 @@ header .section {
   color: #757575;
 }
 
-.advantages-item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .advantages-title {
+    text-align: center;
+  }
+  .advantages-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .advantages-item {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .advantages-item:nth-child(even) {
+    margin-right: 0px;
+  }
+  .advantages-item:nth-child(n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .advantages-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .job.section {
