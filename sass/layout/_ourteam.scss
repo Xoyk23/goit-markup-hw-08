@@ -82,9 +82,19 @@
 
 // стили для десктопа
 @media screen and (min-width: 1200px) {
+  .team.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .team-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+  }
+  .team-main-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
   }
 }
