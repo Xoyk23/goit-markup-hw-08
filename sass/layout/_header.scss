@@ -116,6 +116,14 @@ header .section {
 
 // Стили для мобилки
 @media screen and (max-width: 767px) {
+  .head {
+    position: fixed;
+    width: 100%;
+    min-height: 60px;
+    background-color: inherit;
+    z-index: 50;
+  }
+
   header {
     position: relative;
 

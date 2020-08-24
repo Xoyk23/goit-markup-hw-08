@@ -230,30 +230,28 @@ placeholder=" "
           <h2 class="job-title">Чем мы занимаемся</h2>
           <ul class="job-list list">
             <li class="job-list-item">
-              <img
-                src="./images/laptop.jpg"
-                alt="laptop"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source srcset="./images/desctop.webp 1x, ./images/desctop@2x.webp 2x" type="image/webp"  media="(min-width:1200px)">
+               
+                <img  srcset="./images/desctop.jpg 1x, ./images/desctop@2x.jpg 2x" src="./images/desctop.jpg" alt="Компьютер">
+              </picture>
+ 
               <h3 class="job-description">Десктопные приложения</h3>
             </li>
             <li class="job-list-item">
-              <img
-                src="./images/smartphone.jpg"
-                alt="smartphone"
-                width="370"
-                height="294"
-              />
+            <picture>
+                <source srcset="./images/mobile.webp 1x, ./images/mobile@2x.webp 2x" type="image/webp"  media="(min-width:1200px)">
+               
+                <img  srcset="./images/mobile.jpg 1x, ./images/mobile@2x.jpg 2x" src="./images/mobile.jpg" alt="мобильный">
+              </picture>
               <h3 class="job-description">Мобильные приложения</h3>
             </li>
             <li class="job-list-item">
-              <img
-                src="./images/design.jpg"
-                alt="design"
-                width="370"
-                height="294"
-              />
+               <picture>
+                <source srcset="./images/design.webp 1x, ./images/design@2x.webp 2x" type="image/webp"  media="(min-width:1200px)">
+               
+                <img  srcset="./images/design.jpg 1x, ./images/design@2x.jpg 2x" src="./images/design.jpg" alt="дизайн">
+              </picture>
               <h3 class="job-description">Дизайнерские решения</h3>
             </li>
           </ul>
