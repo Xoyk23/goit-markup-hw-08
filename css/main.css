@@ -1468,7 +1468,6 @@ footer div.section {
 
 @media screen and (min-width: 1200px) {
   .filter-list {
-    display: flex;
     margin-bottom: 34px;
     justify-content: center;
   }
