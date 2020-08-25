@@ -116,13 +116,13 @@ header .section {
 
 // Стили для мобилки
 @media screen and (max-width: 767px) {
-  .head {
-    position: fixed;
-    width: 100%;
-    min-height: 60px;
-    background-color: inherit;
-    z-index: 50;
-  }
+  // .head {
+  //   position: fixed;
+  //   width: 100%;
+  //   min-height: 60px;
+  //   background-color: inherit;
+  //   z-index: 50;
+  // }
 
   header {
     position: relative;
@@ -190,6 +190,8 @@ header .section {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     background-color: $primary-white-color;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
     padding-top: 60px;
 
     padding-bottom: 60px;
@@ -198,6 +200,7 @@ header .section {
     // display: block;
     opacity: 1;
     transform: scale(1);
+    z-index: 99;
   }
 
   // кнопка меню

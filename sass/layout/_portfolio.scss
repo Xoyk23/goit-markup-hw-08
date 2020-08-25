@@ -1,5 +1,6 @@
 .portfolio-item-img {
   display: block;
+  width: 100%;
 }
 
 .portfolio-item-link {
@@ -7,26 +8,30 @@
 }
 
 .portfolio-section {
-  padding-top: 93px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.portfolio {
+// кнопки фильтров
+.filter-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+// для вьюпорта меньше 400
+.filter-list-item:nth-child(-n + 4) {
+  margin-bottom: 15px;
 }
 
 .portfolio-item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
+  width: 100%;
+
   margin-bottom: 30px;
 
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
-  }
-  &:nth-child(3n) {
-    margin-right: 0px;
-  }
   &:hover,
   &:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -53,6 +58,10 @@
   line-height: 2;
   letter-spacing: 0.06em;
   color: $primary-title-color;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .portfolio-text {
@@ -60,17 +69,6 @@
   line-height: 1.9;
   color: $primary-text-color;
 }
-
-.filter-list {
-  display: flex;
-  margin-bottom: 34px;
-  justify-content: center;
-}
-
-.filter-list-item:not(:last-child) {
-  margin-right: 8px;
-}
-
 .portfolio-item-img-description {
   position: relative;
   overflow: hidden;
@@ -107,6 +105,59 @@
   }
 }
 
-a {
-  text-decoration: none;
+@media screen and (min-width: 480px) {
+  .portfolio-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portfolio-item {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    display: flex;
+    margin-bottom: 34px;
+    justify-content: center;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+  }
 }
