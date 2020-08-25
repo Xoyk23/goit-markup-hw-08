@@ -204,6 +204,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: calc(100% - 30px);
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 40px;
@@ -228,6 +229,7 @@ a {
 .connection__input {
   height: 40px;
   padding-left: 42px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -295,6 +297,7 @@ a {
 
 .connection__textarea-input {
   height: 120px;
+  width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 12px;
@@ -385,18 +388,6 @@ a {
   fill: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
-  .modal {
-    width: calc(100% - 30px);
-  }
-  .connection__input {
-    width: 100%;
-  }
-  .connection__textarea-input {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 479px) {
   .checkbox {
     font-size: 10px;
@@ -408,7 +399,7 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal {
     width: 450px;
   }
