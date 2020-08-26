@@ -1363,12 +1363,16 @@ footer div.section {
   margin-bottom: 40px;
 }
 
-.filter-list-item:not(:last-child) {
-  margin-right: 8px;
+.filter-list-item {
+  margin-bottom: 15px;
 }
 
-.filter-list-item:nth-child(-n + 4) {
-  margin-bottom: 15px;
+.filter-list-item:nth-last-child(-n + 2) {
+  margin-bottom: 0px;
+}
+
+.filter-list-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-item {
