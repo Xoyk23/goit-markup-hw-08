@@ -389,6 +389,16 @@ a {
 }
 
 @media screen and (max-width: 479px) {
+  .modal {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .modal__invite {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
   .checkbox {
     font-size: 10px;
     line-height: 1.17;
@@ -396,6 +406,21 @@ a {
   .connection__link {
     font-size: 10px;
     line-height: 1.17;
+  }
+  .connection__field {
+    margin-bottom: 15px;
+  }
+  .connection__textarea {
+    margin-bottom: 15px;
+  }
+  .connection__field:focus-within > .connection__label,
+  .connection__input:not(:placeholder-shown) + .connection__label {
+    color: #2196f3;
+    transform: translate(-24px, -34px);
+  }
+  .connection__textarea:focus-within > .connection__label-textarea,
+  .connection__textarea-input:not(:placeholder-shown) + .connection__label-textarea {
+    transform: translate(-1px, -26px);
   }
 }
 
@@ -677,7 +702,6 @@ header .section {
 
 @media screen and (min-width: 768px) {
   header {
-    max-width: 1199px;
     margin: 0 auto;
   }
   .logo-head {
@@ -1446,6 +1470,13 @@ footer div.section {
 @media screen and (max-width: 400px) {
   .filter-list-item:nth-child(-n + 4) {
     margin-bottom: 15px;
+  }
+  .portfolio-description {
+    padding-top: 31px;
+    padding-bottom: 30px;
+    padding-right: 12px;
+    padding-left: 11px;
+    font-size: 14px;
   }
 }
 

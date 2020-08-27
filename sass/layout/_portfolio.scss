@@ -116,6 +116,14 @@
   .filter-list-item:nth-child(-n + 4) {
     margin-bottom: 15px;
   }
+  .portfolio-description {
+    padding-top: 31px;
+    padding-bottom: 30px;
+    padding-right: 12px;
+    padding-left: 11px;
+
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 480px) {
